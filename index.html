@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="img/6_salsa_bottle/1_salsa_bottle_on_ground.png" type="image/x-icon">
+  <title>ElPoloLoco</title>
+  <link rel="stylesheet" href="10_style.css" />
+</head>
+
+<body onload="init()" id="body">
+  <div class="startingScreen" id="startingScreen">
+    <div class="canvasDiv" id="canvasDiv">
+      <div class="textCanvasScreen" id="textCanvasScreen"></div>
+      <canvas id="canvas" class="canvas"></canvas>
+
+      <button onclick="startButton()" id="startButton" class="startButton">
+        Start Game
+      </button>
+      
+      <div class="soundImg">
+        <img src="img/play.svg" onclick="pauseGame()" class="playButton" id="playButton">
+        <img src="img/pause.svg" onclick="pauseGame()" class="pauseButton" id="pauseButton">
+
+        <img src="img/keyboard.svg" onclick="keyboardControls(); pauseGame()" />
+
+        <img src="img/soundon.svg" onclick="muteSound()" id="soundon" class="soundon" />
+        <img src="img/soundoff.svg" onclick="unMuteSound()" id="soundoff" class="soundoff" />
+
+        <img src="img/fullscreen.svg" onclick="fullScreen()" id="fullScreen" class="fullScreen" />
+        <img src="img/exitFullscreen.svg" onclick="exitFullScreen()" id="exitFullScreen" class="exitFullScreen" />
+      </div>
+
+      <div class="arrowImg">
+        <img src="img/leftArrow.svg" id="onLeftButton" />
+        <img src="img/rightArrow.svg" id="onRightButton" />
+      </div>
+
+      <div class="jumpBottleImg">
+        <img src="img/2_character_pepe/3_jump/J-34.png" class="borderButton" id="onJumpButton" />
+        <img src="img/6_salsa_bottle/bottle_rotation/1_bottle_rotation.png" class="borderButton" id="onThrowButton" />
+      </div>
+
+      <div class="keyboardControlDiv" id="keyboardControlDiv">
+        <div class="keyboardControlDescription">
+          <img src="img/cross.svg" class="keyboardControlDescriptionCross" onclick="hideKeyboardControls(); pauseGame()" />
+          <div class="controlItems" id="controlItems">
+            <div class="controlItemsDiv">
+              <h1>Keyboard</h1>
+              <h2>D</h2>
+              <h2>A</h2>
+              <h2>W</h2>
+              <h2>CTRL</h2>
+            </div>
+            <div class="controlItemsDiv">
+              <h1>Controls</h1>
+              <h2>Right</h2>
+              <h2>Left</h2>
+              <h2>Jump</h2>
+              <h2>Throw Bottle</h2>
+            </div>
+            <div class="controlItemsDiv controlItemsImg">
+              <h1>Smartphone</h1>
+              <img src="img/rightArrow.svg">
+              <img src="img/leftArrow.svg">
+              <img src="img/2_character_pepe/3_jump/J-34.png">
+              <img src="img/6_salsa_bottle/bottle_rotation/1_bottle_rotation.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="rotationScreen" id="rotationScreen">
+      Please Rotate your Screen
+    </div>
+  </div>
+  <div class="endingScreen" id="endingScreen">
+    <button class="backToMainMenuButton" onclick="backToMainMenu()">Main Menu</button>
+    <button class="backToMainMenuButton" onclick="restartGame()">Restart Game</button>
+  </div>
+  <div class="gameOverScreen" id="gameOverScreen">
+    <button class="backToMainMenuButton" onclick="backToMainMenu()">Main Menu</button>
+  </div>
+
+  <script src="models/drawableObject.class.js"></script>
+  <script src="models/movableObject.class.js"></script>
+  <script src="models/character.class.js"></script>
+  <script src="models/chicken.class.js"></script>
+  <script src="models/cloud.class.js"></script>
+  <script src="models/finalbosshealthbar.class.js"></script>
+  <script src="models/statusbar.class.js"></script>
+  <script src="models/bottlebar.class.js"></script>
+  <script src="models/coinbar.class.js"></script>
+  <script src="models/world.class.js"></script>
+  <script src="models/backgroundObjekt.class.js"></script>
+  <script src="models/keyboard.class.js"></script>
+  <script src="models/level.class.js"></script>
+  <script src="models/throwableObject.class.js"></script>
+  <script src="models/finalboss.class.js"></script>
+  <script src="models/bottle.class.js"></script>
+  <script src="models/coin.class.js"></script>
+  <script src="Levels/level1.js"></script>
+  <script src="10_javascript.js"></script>
+</body>
+
+</html>

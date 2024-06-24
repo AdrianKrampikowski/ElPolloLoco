@@ -1,0 +1,315 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+canvas {
+  display: block;
+  background-image: url("img/9_intro_outro_screens/start/startscreen_1.png");
+  width: 800px;
+  height: 500px;
+  background-size: 100% 100%;
+  border-radius: 10px;
+}
+
+.textCanvasScreen {
+  background-image: url("img/9_intro_outro_screens/start/startscreen_1.png");
+  width: 800px;
+  height: 500px;
+  background-size: 100% 100%;
+  border-radius: 10px;
+  display: none;
+}
+
+.header {
+  height: 100px;
+  width: 100vw;
+}
+
+.startingScreen {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("img/startingScreen.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.canvasDiv {
+  position: absolute;
+}
+
+.startButton {
+  background-color: rgba(250, 150, 0, 1);
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.backToMainMenuButton {
+  background-color: rgba(250, 150, 0, 1);
+  position: relative;
+  bottom: 150px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  margin-right: 10px;
+}
+
+.endingScreen {
+  display: none;
+  background-image: url("img/9_intro_outro_screens/game_over/oh no you lost!.png");
+  background-size: 800px 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.gameOverScreen {
+  display: none;
+  background-image: url("img/9_intro_outro_screens/game_over/game\ over.png");
+  background-size: 800px 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+}
+
+.controlItems {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  border-radius: 10px;
+  margin-top: 10px;
+  gap: 5%;
+}
+
+.controlItemsDiv {
+  height: 250px;
+}
+
+.controlItemsDiv img {
+  height: 45px;
+  width: 45px;
+}
+
+.controlItemsImg {
+  display: flex;
+  flex-direction: column;
+}
+
+.landscape h1 {
+  color: white;
+}
+
+.soundImg {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.soundImg img {
+  height: 30px;
+  cursor: pointer;
+}
+
+.playButton {
+  display: none;
+  margin-right: 25px;
+}
+.pauseButton {
+  display: none;
+  margin-right: 25px;
+}
+
+.arrowImg {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.arrowImg img {
+  height: 50px;
+}
+
+.jumpBottleImg {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.jumpBottleImg img {
+  height: 75px;
+}
+
+.keyboardControlDiv {
+  width: 100%;
+  height: 99.5%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  border-radius: 10px;
+  background-color: rgba(66, 66, 66, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.keyboardControlDescription {
+  width: 75%;
+  height: 75%;
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.keyboardControlDescriptionCross {
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.soundoff {
+  display: none;
+}
+
+.exitFullScreen {
+  display: none;
+}
+
+.rotationScreen {
+  display: none;
+}
+
+.hideCanvasDiv {
+  display: none;
+}
+
+@media only screen and (max-width: 800px) {
+  .canvas {
+    width: 600px !important;
+    height: 375px !important;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  .controlItemsDiv {
+    height: 200px;
+  }
+
+  .controlItemsDiv img {
+    height: 45px;
+    width: 45px;
+  }
+  .arrowImg {
+    display: block;
+  }
+  .jumpBottleImg {
+    display: block;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .canvasDiv {
+    display: none;
+  }
+  .rotationScreen {
+    display: flex;
+    width: 80vw;
+    height: 500px;
+    background-color: rgba(167, 167, 167, 0.5);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px;
+  }
+  .backToMainMenuButton {
+    display: none;
+  }
+}
+
+@media only screen and (max-device-width: 720px) and (orientation: landscape) {
+  .canvas {
+    width: 500px !important;
+    height: 312.5px !important;
+  }
+  .canvasDiv {
+    display: block;
+  }
+  .rotationScreen {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  .canvas {
+    width: 500px !important;
+    height: 312.5px !important;
+  }
+  .controlItemsDiv img {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+@media only screen and (max-height: 500px) {
+  .canvas {
+    width: 500px !important;
+    height: 312.5px !important;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-height: 300px) {
+  .canvas {
+    width: 400px !important;
+    height: 250px !important;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+}
