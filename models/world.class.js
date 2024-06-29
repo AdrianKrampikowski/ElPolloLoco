@@ -92,7 +92,7 @@ class World {
     characterCollisionCheckFinalBoss(enemy) {
         return this.character.speedY < 0 &&
             this.character.y < 160 &&
-            enemy.x < 1150
+            enemy.x < 6000
     }
 
     characterCollectingBottles() {
@@ -131,6 +131,9 @@ class World {
     }
 
     finalBossGetHit() {
+        if (this.finalBossLife > 1) {
+            this.finalboss.animateHurt();
+        }
         let timepassed = new Date().getTime() - this.hitFinalBoss;
         this.hitFinalBoss = new Date().getTime();
         if (timepassed > 500) {
@@ -240,7 +243,7 @@ class World {
     }
 
     characterSeeFinalBossAndFinalBossAlive() {
-        return this.character.x > 1000 &&
+        return this.character.x > 4000 &&
             this.finalBossLife != 0
     }
     finalBossDeadAndCharacterAlive() {

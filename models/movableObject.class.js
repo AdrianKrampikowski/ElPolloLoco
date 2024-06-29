@@ -63,7 +63,7 @@ class MovableObject extends DrawableObject {
     }
 
     playAnimationFinalBoss(images) {
-        if (this.maxImgLength < 3) {
+        if (this.maxImgLength < 5) {
             let i = this.finalBossImage;
             let path = images[i];
             this.img = this.imageCache[path];
