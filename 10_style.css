@@ -197,6 +197,13 @@ canvas {
   position: absolute;
   top: 10px;
   right: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 100%;
+}
+.keyboardControlDescriptionCross:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+
 }
 
 .soundoff {
