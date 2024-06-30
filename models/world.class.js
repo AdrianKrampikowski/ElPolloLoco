@@ -171,7 +171,6 @@ class World {
         coin.y = -300;
         this.playCollectCoinAudio.play();
     }
-
     checkThrowObject() {
         if (this.throwBottleAndFinalBossAlive()) {
             let bottle = new ThrowableObject(this.character.x + 50, this.character.y + 100);
@@ -247,12 +246,14 @@ class World {
         return this.character.x > 4000 &&
             this.finalBossLife != 0
     }
+
     finalBossAttackCharacter() {
         let distanceCharacterFinalBoss = this.finalboss.x - this.character.x;
         if (distanceCharacterFinalBoss < 250) {
             this.finalboss.finalBossAttack()
         }
     }
+
     finalBossDeadAndCharacterAlive() {
         return this.finalBossLife == 0 &&
             !this.character.isDead()

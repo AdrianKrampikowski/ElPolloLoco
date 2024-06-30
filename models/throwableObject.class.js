@@ -23,13 +23,13 @@ class ThrowableObject extends MovableObject {
         this.throw();
     }
 
-    throw(characterDirection) {
+    throw() {
         this.speedY = 30;
         this.acceleration = 2;
         this.applyGravityOnBottle();
         this.inverval11 = setStoppableInterval(() => {
             if (!pause) {
-                    this.x += 40;
+                this.x += 40;
                 this.playAnimation(this.imagesBottleRotation);
             }
         }, 1000 / 12);
