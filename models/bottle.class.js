@@ -11,6 +11,6 @@ class Bottle extends MovableObject {
     
     constructor() {
         super().loadImage('img/6_salsa_bottle/1_salsa_bottle_on_ground.png');
-        this.x = 2000 + Math.random() * 2000;
+        this.x = 1000 + Math.random() * 3000;
     }
 }

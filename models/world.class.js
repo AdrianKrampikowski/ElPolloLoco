@@ -33,6 +33,7 @@ class World {
     inverval12;
     inverval13;
     inverval14;
+    characterDirection;
 
     constructor(canvas, keyboard, screenWidth, screenHeight, sound) {
         this.ctx = canvas.getContext('2d');
@@ -246,6 +247,12 @@ class World {
         return this.character.x > 4000 &&
             this.finalBossLife != 0
     }
+    finalBossAttackCharacter() {
+        let distanceCharacterFinalBoss = this.finalboss.x - this.character.x;
+        if (distanceCharacterFinalBoss < 250) {
+            this.finalboss.finalBossAttack()
+        }
+    }
     finalBossDeadAndCharacterAlive() {
         return this.finalBossLife == 0 &&
             !this.character.isDead()
@@ -281,6 +288,7 @@ class World {
         if (this.character.x > 101) {
             this.characterStartsMoving();
         }
+        this.finalBossAttackCharacter();
     }
 
     finalBossDead() {

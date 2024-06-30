@@ -125,7 +125,7 @@ class MovableObject extends DrawableObject {
         this.inverval10 = setStoppableInterval(() => {
             if (!pause) {
                 this.characterPosition = x;
-                if (x > 1000) {
+                if (x > 4000) {
                     this.moveFinalboss = true;
                 }
             }

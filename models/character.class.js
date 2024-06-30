@@ -5,6 +5,7 @@ class Character extends MovableObject {
     bottles = 0;
     lastSound = 0;
     world;
+
     offset = {
         top: 150,
         bottom: 0,
@@ -121,6 +122,11 @@ class Character extends MovableObject {
     }
 
     keypressForWalking() {
+        if (this.world.keyboard.RIGHT) {
+            this.characterDirection = 'right'
+        } else if (this.world.keyboard.LEFT) {
+            this.characterDirection = 'left'
+        }
         return this.world.keyboard.RIGHT ||
             this.world.keyboard.LEFT
     }
