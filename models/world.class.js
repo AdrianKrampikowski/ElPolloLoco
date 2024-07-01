@@ -34,6 +34,7 @@ class World {
     inverval13;
     inverval14;
     characterDirection;
+    throwStartPositionX;
 
     constructor(canvas, keyboard, screenWidth, screenHeight, sound) {
         this.ctx = canvas.getContext('2d');
@@ -171,9 +172,15 @@ class World {
         coin.y = -300;
         this.playCollectCoinAudio.play();
     }
+
     checkThrowObject() {
         if (this.throwBottleAndFinalBossAlive()) {
-            let bottle = new ThrowableObject(this.character.x + 50, this.character.y + 100);
+            if (this.character.characterDirection == 'left') {
+                this.throwStartPositionX = this.character.x - 50;
+            } else {
+                this.throwStartPositionX = this.character.x + 50;
+            }
+            let bottle = new ThrowableObject(this.throwStartPositionX, this.character.y + 100, this.character.characterDirection);
             if (this.collectedBottleCount > 0) {
                 this.throwableObject = bottle;
                 this.throwableObject.throw()

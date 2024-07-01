@@ -101,20 +101,38 @@ canvas {
 
 .controlItems {
   display: flex;
-  align-items: center;
-  padding: 0 15px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 90%;
+  /* padding: 0 15px; */
   border-radius: 10px;
   margin-top: 10px;
   gap: 5%;
 }
-
 .controlItemsDiv {
-  height: 250px;
+  /* max-height: 150px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.controlItemsDiv p{
+  margin: 10px;
+}
+
+.controlItemsImg {
+  /* height: 250px; */
+  gap: 10px;
+}
+
+.controlItemsImg h2{
+  margin-bottom: 5px;
 }
 
 .controlItemsDiv img {
-  height: 45px;
-  width: 45px;
+  height: 27.5px;
+  width: 27.5px;
 }
 
 .controlItemsImg {
@@ -229,18 +247,17 @@ canvas {
     height: 375px !important;
   }
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
   }
   h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .controlItemsDiv {
     height: 200px;
   }
-
   .controlItemsDiv img {
-    height: 45px;
-    width: 45px;
+    height: 35px;
+    width: 35px;
   }
   .arrowImg {
     display: block;
@@ -287,10 +304,10 @@ canvas {
 
 @media only screen and (max-width: 600px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
   .canvas {
     width: 500px !important;
@@ -308,7 +325,7 @@ canvas {
     height: 312.5px !important;
   }
   h2 {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
